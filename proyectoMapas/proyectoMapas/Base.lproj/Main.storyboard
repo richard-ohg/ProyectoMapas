@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="proyectoMapas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Source" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYC-un-ggK">
+                                <rect key="frame" x="0.0" y="30" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v72-Yg-bWo">
+                                <rect key="frame" x="0.0" y="62" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f5Y-nQ-MRj">
+                                <rect key="frame" x="0.0" y="161" width="414" height="555"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLn-ww-XwV">
+                                <rect key="frame" x="120" y="104" width="174" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.29328070688369889" blue="0.18737311551977998" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="GO"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eLn-ww-XwV" secondAttribute="trailing" constant="120" id="00Y-bf-2ys"/>
+                            <constraint firstItem="v72-Yg-bWo" firstAttribute="top" secondItem="SYC-un-ggK" secondAttribute="bottom" constant="-2" id="C7B-1Z-24E"/>
+                            <constraint firstItem="eLn-ww-XwV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="GRM-Yw-JtB"/>
+                            <constraint firstItem="SYC-un-ggK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M7M-Ha-0T1"/>
+                            <constraint firstItem="SYC-un-ggK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eLo-Fy-eU2"/>
+                            <constraint firstItem="v72-Yg-bWo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gqa-2W-bvP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f5Y-nQ-MRj" secondAttribute="bottom" constant="20" id="lSM-Vs-2yQ"/>
+                            <constraint firstItem="eLn-ww-XwV" firstAttribute="top" secondItem="v72-Yg-bWo" secondAttribute="bottom" constant="8" id="sw9-zR-m60"/>
+                            <constraint firstItem="SYC-un-ggK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="tVy-rf-u0h"/>
+                            <constraint firstItem="f5Y-nQ-MRj" firstAttribute="top" secondItem="eLn-ww-XwV" secondAttribute="bottom" constant="15" id="txj-uU-oVQ"/>
+                            <constraint firstItem="v72-Yg-bWo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="utC-30-ky0"/>
+                            <constraint firstItem="f5Y-nQ-MRj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="voo-lz-wHk"/>
+                            <constraint firstItem="f5Y-nQ-MRj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yJh-iX-92l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="destination" destination="v72-Yg-bWo" id="DZE-4C-B4n"/>
+                        <outlet property="myMap" destination="f5Y-nQ-MRj" id="YcY-Sn-Fi3"/>
+                        <outlet property="source" destination="SYC-un-ggK" id="gP6-mS-0aK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.750000000000014"/>
+        </scene>
+    </scenes>
+</document>

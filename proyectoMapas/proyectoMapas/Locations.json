@@ -1,0 +1,146 @@
+{
+    "locations":[
+        {
+            "title": "Ingenieria",
+            "subtitle": "Anexo",
+            "latitud": 19.3243343,
+            "longitud": -99.1812102,
+            "photo": "pin"
+        },
+        {
+            "title": "MUCA",
+            "subtitle": "Museo Universitario de Ciencias y Arte",
+            "latitud": 19.331131,
+            "longitud": -99.187745,
+            "photo": "pin"
+        },
+        {
+            "title": "Facultad de",
+            "subtitle": "Ciencias",
+            "latitud": 19.3230435,
+            "longitud": -99.1807212,
+            "photo": "pin"
+        },
+        {
+            "title": "Facultad de",
+            "subtitle": "Química",
+            "latitud": 19.3219703,
+            "longitud": -99.1800239,
+            "photo": "pin"
+        },
+        {
+            "title": "Metro CU",
+            "subtitle": "Estación",
+            "latitud": 19.3223044,
+            "longitud": -99.176183,
+            "photo": "pin"
+        },
+        {
+            "title": "Escuela Nacional",
+            "subtitle": "de Trabajo Social",
+            "latitud": 19.3234282,
+            "longitud": -99.18718,
+            "photo": "pin"
+        },
+        {
+            "title": "Facultad de",
+            "subtitle": "Contaduria y Administracion",
+            "latitud": 19.3238952,
+            "longitud": -99.1852005,
+            "photo": "pin"
+        },
+        {
+            "title": "Instituto de",
+            "subtitle": "Ecología",
+            "latitud": 19.3227613,
+            "longitud": -99.1914984,
+            "photo": "pin"
+        },
+        {
+            "title": "Instituto de",
+            "subtitle": "Investigaciones Biomédicas",
+            "latitud": 19.3232422,
+            "longitud": -99.1910048,
+            "photo": "pin"
+        },
+        {
+            "title": "Estadio",
+            "subtitle": "Ciudad Universitaria",
+            "latitud": 19.3312909,
+            "longitud": -99.1888269,
+            "photo": "pin"
+        },
+        {
+            "title": "Rectoria",
+            "subtitle": "de la UNAM",
+            "latitud": 19.3318908,
+            "longitud": -99.1891219,
+            "photo": "pin"
+        },
+        {
+            "title": "Facultad de",
+            "subtitle": "Psicología",
+            "latitud": 19.3342547,
+            "longitud": -99.1890951,
+            "photo": "pin"
+        },
+        {
+            "title": "Facultad de",
+            "subtitle": "Filosofía y Letras",
+            "latitud": 19.3341332,
+            "longitud": -99.1870673,
+            "photo": "pin"
+        },
+        {
+            "title": "Facultad de",
+            "subtitle": "Derecho",
+            "latitud": 19.3339206,
+            "longitud": -99.1853615,
+            "photo": "pin"
+        },
+        {
+            "title": "Facultad de",
+            "subtitle": "Odontología",
+            "latitud": 19.3339358,
+            "longitud": -99.1821053,
+            "photo": "pin"
+        },
+        {
+            "title": "Facultad de",
+            "subtitle": "Medicina",
+            "latitud": 19.333298,
+            "longitud": -99.1808339,
+            "photo": "pin"
+        },
+        {
+            "title": "Ingenieria",
+            "subtitle": "Principal",
+            "latitud": 19.3303367,
+            "longitud": -99.184176,
+            "photo": "pin"
+        },
+        {
+            "title": "Facultad de Ciencias",
+            "subtitle": "Políticas y Sociales",
+            "latitud": 19.317966,
+            "longitud": -99.1784837,
+            "photo": "pin"
+        },
+        {
+            "title": "Universum",
+            "subtitle": "Museo de las Ciencias de la UNAM",
+            "latitud": 19.3112475,
+            "longitud": -99.1843604,
+            "photo": "pin"
+        },
+        {
+            "title": "Facultad de",
+            "subtitle": "Economía",
+            "latitud": 19.334861,
+            "longitud": -99.183461,
+            "photo": "pin"
+        }
+    ]
+}
+
+
