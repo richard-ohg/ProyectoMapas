@@ -1,144 +1,144 @@
 {
     "locations":[
         {
-            "title": "Ingenieria",
-            "subtitle": "Anexo",
-            "latitud": 19.3243343,
-            "longitud": -99.1812102,
-            "photo": "pin"
+            "title": "Anexo de Ingeniería",
+            "subtitle": "1",
+            "latitud": 19.3250715,
+            "longitud": -99.1841346,
+            "photo": "pin2"
         },
         {
-            "title": "MUCA",
-            "subtitle": "Museo Universitario de Ciencias y Arte",
-            "latitud": 19.331131,
-            "longitud": -99.187745,
-            "photo": "pin"
-        },
-        {
-            "title": "Facultad de",
-            "subtitle": "Ciencias",
-            "latitud": 19.3230435,
-            "longitud": -99.1807212,
-            "photo": "pin"
-        },
-        {
-            "title": "Facultad de",
-            "subtitle": "Química",
-            "latitud": 19.3219703,
-            "longitud": -99.1800239,
-            "photo": "pin"
-        },
-        {
-            "title": "Metro CU",
-            "subtitle": "Estación",
-            "latitud": 19.3223044,
-            "longitud": -99.176183,
-            "photo": "pin"
-        },
-        {
-            "title": "Escuela Nacional",
-            "subtitle": "de Trabajo Social",
-            "latitud": 19.3234282,
-            "longitud": -99.18718,
-            "photo": "pin"
-        },
-        {
-            "title": "Facultad de",
-            "subtitle": "Contaduria y Administracion",
-            "latitud": 19.3238952,
-            "longitud": -99.1852005,
-            "photo": "pin"
-        },
-        {
-            "title": "Instituto de",
-            "subtitle": "Ecología",
-            "latitud": 19.3227613,
-            "longitud": -99.1914984,
-            "photo": "pin"
-        },
-        {
-            "title": "Instituto de",
-            "subtitle": "Investigaciones Biomédicas",
-            "latitud": 19.3232422,
-            "longitud": -99.1910048,
-            "photo": "pin"
-        },
-        {
-            "title": "Estadio",
-            "subtitle": "Ciudad Universitaria",
-            "latitud": 19.3312909,
-            "longitud": -99.1888269,
-            "photo": "pin"
-        },
-        {
-            "title": "Rectoria",
-            "subtitle": "de la UNAM",
-            "latitud": 19.3318908,
-            "longitud": -99.1891219,
-            "photo": "pin"
-        },
-        {
-            "title": "Facultad de",
-            "subtitle": "Psicología",
-            "latitud": 19.3342547,
-            "longitud": -99.1890951,
-            "photo": "pin"
-        },
-        {
-            "title": "Facultad de",
-            "subtitle": "Filosofía y Letras",
-            "latitud": 19.3341332,
-            "longitud": -99.1870673,
-            "photo": "pin"
-        },
-        {
-            "title": "Facultad de",
-            "subtitle": "Derecho",
-            "latitud": 19.3339206,
-            "longitud": -99.1853615,
-            "photo": "pin"
-        },
-        {
-            "title": "Facultad de",
-            "subtitle": "Odontología",
-            "latitud": 19.3339358,
-            "longitud": -99.1821053,
-            "photo": "pin"
-        },
-        {
-            "title": "Facultad de",
-            "subtitle": "Medicina",
-            "latitud": 19.333298,
-            "longitud": -99.1808339,
-            "photo": "pin"
-        },
-        {
-            "title": "Ingenieria",
-            "subtitle": "Principal",
-            "latitud": 19.3303367,
-            "longitud": -99.184176,
-            "photo": "pin"
+            "title": "Museo Universitario de Ciencias y Arte - MUCA",
+            "subtitle": "2",
+            "latitud": 19.3310297,
+            "longitud": -99.1876568,
+            "photo": "pin2"
         },
         {
             "title": "Facultad de Ciencias",
-            "subtitle": "Políticas y Sociales",
-            "latitud": 19.317966,
-            "longitud": -99.1784837,
-            "photo": "pin"
+            "subtitle": "3",
+            "latitud": 19.3238522,
+            "longitud": -99.1801877,
+            "photo": "pin2"
+        },
+        {
+            "title": "Facultad de Química",
+            "subtitle": "4",
+            "latitud": 19.3232377,
+            "longitud": -99.1792637,
+            "photo": "pin2"
+        },
+        {
+            "title": "Metro CU",
+            "subtitle": "5",
+            "latitud": 19.3240189,
+            "longitud": -99.1748546,
+            "photo": "pin2"
+        },
+        {
+            "title": "Escuela Nacional de Trabajo Social",
+            "subtitle": "6",
+            "latitud": 19.323764,
+            "longitud": -99.1868045,
+            "photo": "pin2"
+        },
+        {
+            "title": "Facultad de Contaduria y Administracion",
+            "subtitle": "7",
+            "latitud": 19.3240978,
+            "longitud": -99.1846067,
+            "photo": "pin2"
+        },
+        {
+            "title": "Nike Store Pumas",
+            "subtitle": "8",
+            "latitud": 19.3333944,
+            "longitud": -99.1948631,
+            "photo": "pin2"
+        },
+        {
+            "title": "Instituto de Investigaciones Biomédicas",
+            "subtitle": "9",
+            "latitud": 19.3232747,
+            "longitud": -99.1913721,
+            "photo": "pin2"
+        },
+        {
+            "title": "Estadio Olimpico Universitario",
+            "subtitle": "10",
+            "latitud": 19.3316385,
+            "longitud": -99.1917423,
+            "photo": "pin2"
+        },
+        {
+            "title": "Rectoria de la UNAM",
+            "subtitle": "11",
+            "latitud": 19.3319492,
+            "longitud": -99.1886188,
+            "photo": "pin2"
+        },
+        {
+            "title": "Facultad de Psicología",
+            "subtitle": "12",
+            "latitud": 19.334838,
+            "longitud": -99.188834,
+            "photo": "pin2"
+        },
+        {
+            "title": "Facultad de Filosofía y Letras",
+            "subtitle": "13",
+            "latitud": 19.3344593,
+            "longitud": -99.1864938,
+            "photo": "pin2"
+        },
+        {
+            "title": "Facultad de Derecho",
+            "subtitle": "14",
+            "latitud": 19.3346575,
+            "longitud": -99.1849516,
+            "photo": "pin2"
+        },
+        {
+            "title": "Facultad de Odontología",
+            "subtitle": "15",
+            "latitud": 19.3342901,
+            "longitud": -99.1816082,
+            "photo": "pin2"
+        },
+        {
+            "title": "Facultad de Medicina",
+            "subtitle": "16",
+            "latitud": 19.3331143,
+            "longitud": -99.1802108,
+            "photo": "pin2"
+        },
+        {
+            "title": "Tienda UNAM",
+            "subtitle": "17",
+            "latitud": 19.3209543,
+            "longitud": -99.175467,
+            "photo": "pin2"
+        },
+        {
+            "title": "Facultad de Ciencias Políticas y Sociales",
+            "subtitle": "18",
+            "latitud": 19.3185994,
+            "longitud": -99.1781057,
+            "photo": "pin2"
         },
         {
             "title": "Universum",
-            "subtitle": "Museo de las Ciencias de la UNAM",
-            "latitud": 19.3112475,
-            "longitud": -99.1843604,
-            "photo": "pin"
+            "subtitle": "19",
+            "latitud": 19.3117873,
+            "longitud": -99.1803843,
+            "photo": "pin2"
         },
         {
-            "title": "Facultad de",
-            "subtitle": "Economía",
-            "latitud": 19.334861,
-            "longitud": -99.183461,
-            "photo": "pin"
+            "title": "Facultad de Economía",
+            "subtitle": "20",
+            "latitud": 19.3347811,
+            "longitud": -99.1834828,
+            "photo": "pin2"
         }
     ]
 }

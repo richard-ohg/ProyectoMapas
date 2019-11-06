@@ -11,25 +11,64 @@ import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate{
 
-    @IBOutlet weak var source: UITextField!
-    @IBOutlet weak var destination: UITextField!
+    @IBOutlet weak var sourceTextField: UITextField!
+    @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var myMap: MKMapView!
+    
+    var parserJson: Locations!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         myMap.delegate = self
+//        Create region for zoom in CU
         let center = CLLocationCoordinate2D(latitude: 19.324621, longitude: -99.182536)
-        let region = MKCoordinateRegion(center: center , span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02));
+        let region = MKCoordinateRegion(center: center , span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03));
         myMap.setRegion(region, animated: true);
         
-        let parserJson = loadJson(fileName: "Locations")!
-//        for x in arrayLocations!.locations {
-//            print(x.title)
+        parserJson = loadJson(fileName: "Locations")
+//        for x in parserJson.locations {
+//            print(x)
 //        }
         createMarkers(arrayLocations: parserJson.locations)
     }
+    
+    
+    @IBAction func createRoute(_ sender: UIButton) {
+        let source = sourceTextField.text!
+        let destination = destinationTextField.text!
+        
+        if source.isEmpty || destination.isEmpty{
+            let alert = UIAlertController(title: "Error", message: "No debes dejar campos vacios", preferredStyle: .alert)
+            let actionOk = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(actionOk)
+            present(alert, animated: true)
+            return
+        }
+        
+        guard let filterSource = parserJson.locations.filter({$0.title.lowercased().contains(source.lowercased())}).first else{
+            let alert = UIAlertController(title: "Not Found", message: "No se encontró el origen, verifica que se encuentre entre los 20 lugares disponibles o este bien escrito", preferredStyle: .alert)
+            let actionOk = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(actionOk)
+            present(alert, animated: true)
+            return
+        }
 
+        guard let filterDestination = parserJson.locations.filter({$0.title.lowercased().contains(destination.lowercased())}).first else{
+            let alert = UIAlertController(title: "Not Found", message: "No se encontró el destino, verifica que se encuentre entre los 20 lugares disponibles o este bien escrito", preferredStyle: .alert)
+            let actionOk = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(actionOk)
+            present(alert, animated: true)
+            return
+        }
+        
+        print("From: \(filterSource) to: \(filterDestination) ")
+        
+        
+            
+    }
+    
+//    Function for create Annotations in Map
     func createMarkers(arrayLocations: [Location]){
         for item in arrayLocations {
             let myAnnotation = CustomAnnotation();
@@ -42,6 +81,7 @@ class ViewController: UIViewController, MKMapViewDelegate{
         }
     }
     
+//    Function for parser json from file
     func loadJson(fileName: String) -> Locations?{
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             do {
@@ -66,10 +106,8 @@ class ViewController: UIViewController, MKMapViewDelegate{
         
         if pinAnnotationView == nil {
             pinAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "PinAnnotationView")
-            
             // Callout is a popover above the pin
             pinAnnotationView?.canShowCallout = true
-            
         } else {
             // Reusing from recycled annotations
             pinAnnotationView?.annotation = annotation
@@ -80,7 +118,6 @@ class ViewController: UIViewController, MKMapViewDelegate{
         }
         
         return pinAnnotationView
-        
     }
 
 }
