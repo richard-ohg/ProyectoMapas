@@ -64,6 +64,35 @@ class ViewController: UIViewController, MKMapViewDelegate{
         
         print("From: \(filterSource) to: \(filterDestination) ")
         
+        let startLocation = CLLocationCoordinate2D(latitude: filterSource.latitud, longitude: filterSource.longitud)
+        let endLocation = CLLocationCoordinate2D(latitude: filterDestination.latitud, longitude: filterDestination.longitud)
+        
+        let startPlacemark = MKPlacemark(coordinate: startLocation);
+        let endPlacemark = MKPlacemark(coordinate: endLocation);
+        
+        let routeRequest = MKDirections.Request();
+        routeRequest.source = MKMapItem(placemark: startPlacemark)
+        routeRequest.destination = MKMapItem(placemark: endPlacemark)
+        routeRequest.transportType = .walking
+        
+        let directions = MKDirections(request: routeRequest);
+        
+        directions.calculate { (response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let directionsResponse = response else {
+                return
+            }
+            let route = directionsResponse.routes.first
+            self.myMap.addOverlay(route!.polyline)
+            
+            // Create area between A and B point
+            let area = route?.polyline.boundingMapRect
+            self.myMap.setRegion(MKCoordinateRegion(area!), animated: true)
+        }
         
             
     }
@@ -118,6 +147,14 @@ class ViewController: UIViewController, MKMapViewDelegate{
         }
         
         return pinAnnotationView
+    }
+    
+    // When an overlay is added (addOverlay()), this method is called
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let line = MKPolylineRenderer(overlay: overlay)
+        line.strokeColor = .blue
+        line.lineWidth = 6.0
+        return line
     }
 
 }
