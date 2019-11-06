@@ -11,7 +11,7 @@ import UIKit
 struct Location: Codable {
     var title: String
     var subtitle: String
-    var longitud: Double
-    var latitud: Double
+    var longitude: Double
+    var latitude: Double
     var photo: String
 }

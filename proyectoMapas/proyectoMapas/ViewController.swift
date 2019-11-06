@@ -30,7 +30,7 @@ class ViewController: UIViewController, MKMapViewDelegate{
 //        for x in parserJson.locations {
 //            print(x)
 //        }
-        createMarkers(arrayLocations: parserJson.locations)
+        createAnnotations(arrayLocations: parserJson.locations)
     }
     
     
@@ -64,13 +64,19 @@ class ViewController: UIViewController, MKMapViewDelegate{
         
         print("From: \(filterSource) to: \(filterDestination) ")
         
-        let startLocation = CLLocationCoordinate2D(latitude: filterSource.latitud, longitude: filterSource.longitud)
-        let endLocation = CLLocationCoordinate2D(latitude: filterDestination.latitud, longitude: filterDestination.longitud)
+        drawRoute(latitudeSource: filterSource.latitude, longitudeSource: filterSource.longitude, latitudeDestination: filterDestination.latitude, longitudeDestination: filterDestination.longitude)
         
-        let startPlacemark = MKPlacemark(coordinate: startLocation);
-        let endPlacemark = MKPlacemark(coordinate: endLocation);
+    }
+    
+    func drawRoute(latitudeSource: Double, longitudeSource: Double, latitudeDestination: Double, longitudeDestination: Double){
         
-        let routeRequest = MKDirections.Request();
+        let startLocation = CLLocationCoordinate2D(latitude: latitudeSource, longitude: longitudeSource)
+        let endLocation = CLLocationCoordinate2D(latitude: latitudeDestination, longitude: longitudeDestination)
+        
+        let startPlacemark = MKPlacemark(coordinate: startLocation)
+        let endPlacemark = MKPlacemark(coordinate: endLocation)
+        
+        let routeRequest = MKDirections.Request()
         routeRequest.source = MKMapItem(placemark: startPlacemark)
         routeRequest.destination = MKMapItem(placemark: endPlacemark)
         routeRequest.transportType = .walking
@@ -78,30 +84,29 @@ class ViewController: UIViewController, MKMapViewDelegate{
         let directions = MKDirections(request: routeRequest);
         
         directions.calculate { (response, error) in
-            if let error = error {
-                print(error.localizedDescription)
+            guard let directionsResponse = response else {
+                if let error = error {
+                    print(error.localizedDescription)
+                }
                 return
             }
             
-            guard let directionsResponse = response else {
-                return
-            }
-            let route = directionsResponse.routes.first
-            self.myMap.addOverlay(route!.polyline)
+            let route = directionsResponse.routes[0]
+            self.myMap.removeOverlays(self.myMap.overlays)
+//            self.myMap.addOverlay(route.polyline, level: .aboveRoads)
+            self.myMap.addOverlay(route.polyline)
             
             // Create area between A and B point
-            let area = route?.polyline.boundingMapRect
-            self.myMap.setRegion(MKCoordinateRegion(area!), animated: true)
+            let area = route.polyline.boundingMapRect
+            self.myMap.setRegion(MKCoordinateRegion(area), animated: true)
         }
-        
-            
     }
     
 //    Function for create Annotations in Map
-    func createMarkers(arrayLocations: [Location]){
+    func createAnnotations(arrayLocations: [Location]){
         for item in arrayLocations {
             let myAnnotation = CustomAnnotation();
-            myAnnotation.coordinate = CLLocationCoordinate2D(latitude: item.latitud, longitude: item.longitud)
+            myAnnotation.coordinate = CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude)
             myAnnotation.title = item.title
             myAnnotation.subtitle = item.subtitle
             myAnnotation.imageURL = item.photo
